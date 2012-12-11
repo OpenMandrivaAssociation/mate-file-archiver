@@ -1,11 +1,13 @@
+%define url_ver %(echo %{version}|cut -d. -f1,2)
+
 Summary:	An archive manager for MATE
 Name:		mate-file-archiver
-Version:	1.4.0
+Version:	1.4.1
 Release:	1
 License:	GPLv2+
 URL:		http://mate-desktop.org
 Group:		Archiving/Compression
-Source0:	http://pub.mate-desktop.org/releases/%{lua: print (string.match(rpm.expand("%{version}"),"%d+.%d+"))}/%{name}-%{version}.tar.xz
+Source0:	http://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:	intltool
 BuildRequires:	mate-common
@@ -73,11 +75,4 @@ find %{buildroot} -type f -name "*.la" -exec rm -f {} ';'
 %{_datadir}/applications/*
 %{_datadir}/engrampa
 %{_iconsdir}/hicolor/*/*/*.*
-
-
-
-%changelog
-* Sun Jun 03 2012 Matthew Dawkins <mattydaw@mandriva.org> 1.2.1-1
-+ Revision: 802154
-- imported package mate-file-archiver
 
