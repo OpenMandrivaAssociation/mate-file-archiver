@@ -49,7 +49,7 @@ like tar and zip. The supported file types are :
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 NOCONFIGURE=yes ./autogen.sh
