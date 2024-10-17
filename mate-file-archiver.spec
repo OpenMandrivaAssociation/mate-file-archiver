@@ -5,7 +5,7 @@ Name:		mate-file-archiver
 Version:	1.4.1
 Release:	1
 License:	GPLv2+
-URL:		http://mate-desktop.org
+URL:		https://mate-desktop.org
 Group:		Archiving/Compression
 Source0:	http://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
 
